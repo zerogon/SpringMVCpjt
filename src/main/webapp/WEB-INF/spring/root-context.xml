@@ -13,9 +13,30 @@
 		<property name="driverClassName"
 			value="com.mysql.cj.jdbc.Driver"></property>
 		<property name="url"
-			value="jdbc:mysql://127.0.0.1:3306/springTest?useSSL=false&amp;serverTimezone=UTC">
+			value="jdbc:mysql://127.0.0.1:3306/springTest?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC">
 		</property>
-		<property name="username" value="root"></property>
-		<property name="password" value="root"></property>
+		<property name="username" value="zerogon"></property>
+		<property name="password" value="dkansk123"></property>
 	</bean>
+
+	<bean class="org.mybatis.spring.SqlSessionTemplate" id="sqlSession" destroy-method="clearCache">
+		<constructor-arg name="sqlSessionFactory" ref="SqlSessionFactory" />
+	</bean>
+
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="SqlSessionFactory">
+		<property name="dataSource" ref="dataSource" />
+		<property value="classpath:/mybatis/mybatis-config.xml" name="configLocation" />
+		<property value="classpath:/mybatis/mappers/**.xml" name="mapperLocations" />
+	</bean>
+
+	<context:annotation-config />
+	<context:component-scan base-package="dao,service">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Repository" />
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Service" />
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Component" />
+	</context:component-scan>
+
 </beans>

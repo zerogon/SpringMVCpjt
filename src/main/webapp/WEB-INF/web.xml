@@ -14,6 +14,17 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
+	<!-- header  -->
+	<jsp-config> 
+		<jsp-property-group>
+			<url-pattern>/WEB-INF/views/*</url-pattern>
+			<include-prelude>/WEB-INF/common/header.jsp</include-prelude>
+			<include-coda>/WEB-INF/common/footer.jsp</include-coda>
+		</jsp-property-group>
+	</jsp-config>
+
+
+
 	<!-- Processes application requests -->
 	<servlet>
 		<servlet-name>appServlet</servlet-name>

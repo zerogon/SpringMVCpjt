@@ -10,7 +10,7 @@
 	수신받은 페이지 입니다.
 </h1>
 
-<P>  아이디값은 ${id}. </P>
-<P>  암호값은 ${pwd}. </P>
+<P>  이메일값은 ${usrVO.email}. </P>
+<P>  암호값은 ${usrVO.password}. </P>
 </body>
 </html>

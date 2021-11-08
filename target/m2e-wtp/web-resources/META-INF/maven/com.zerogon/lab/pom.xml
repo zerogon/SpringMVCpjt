@@ -119,7 +119,7 @@
 		</dependency>
 
 
-
+		<!-- pom.xml 추가 start -->
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -133,7 +133,6 @@
             <artifactId>mybatis</artifactId>
             <version>3.4.1</version>
         </dependency>
- 
  
         <!-- MyBatis-Spring -->
         <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
@@ -158,7 +157,7 @@
             <artifactId>spring-test</artifactId>
             <version>${org.springframework-version}</version>
         </dependency>
-
+		<!-- pom.xml 추가 end  -->
 
 
 	</dependencies>

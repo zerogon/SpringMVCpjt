@@ -11,8 +11,8 @@
 	
 </h1>
 	<form action="${ pageContext.servletContext.contextPath }/page/sendPagePro" method="POST">
-		<font>아이디: </font><input type="text" name="id"/><p>
-		<font>암호: </font><input type="text" name="pwd"/><p>
+		<font>아이디: </font><input type="text" name="email"/><p>
+		<font>암호: </font><input type="text" name="password"/><p>
 		<button type="submit">로그인</button>
 	</form>
 </body>
